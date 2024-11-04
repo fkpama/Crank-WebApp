@@ -1,0 +1,42 @@
+imports:
+- https://raw.githubusercontent.com/dotnet/crank/main/src/Microsoft.Crank.Jobs.Bombardier/bombardier.yml
+
+jobs:
+  webapp:
+    sources:
+      app:
+        repository: https://kpamafrederic@dev.azure.com/kpamafrederic/Framework/_git/MCS-Crank
+    project: webapp/Crank-BenchmarkApp/Crank-BenchmarkApp.csproj
+    readyStateText: Application started.
+    environmentVariables:
+      ASPNETCORE_ENVIRONMENT: Development
+
+scenarios:
+  webapp:
+    server:
+      job: webapp
+
+    client_app:
+      job: bombardier
+
+
+profiles:
+  build-agent:
+    jobs:
+      server:
+        endpoints:
+          - http://crank-agent:5010
+
+      client_app:
+        endpoints:
+          - http://crank-agent-2:5011
+
+  local:
+    jobs:
+      server:
+        endpoints:
+          - http://localhost:5010
+
+      client_app:
+        endpoints:
+          - http://localhost:5011
