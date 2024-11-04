@@ -1,5 +1,11 @@
-pool: Engie
+pool:
+  name: engie
 
 
 steps:
-  - task: crankRunner@0.0.1
+- task: crankRunnerTask@0
+  inputs:
+    configFile: 'api.benchmark.yml'
+    scenario: 'webapp'
+    platform: 'build-agent'
+    connectionString: 'Hello World'
