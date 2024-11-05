@@ -3,7 +3,7 @@ pool:
 
 
 steps:
-- task: crankRunnerTask@0.1.1
+- task: crankRunnerTask@0.1.2
   inputs:
     configFile: 'api.benchmark.yml'
     scenario: 'webapp'
