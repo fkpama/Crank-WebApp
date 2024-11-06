@@ -3,7 +3,9 @@ pool:
 
 
 steps:
-- task: crankRunnerTask@0.1.3
+- task: crankInstallerTask@0
+
+- task: crankRunnerTask@0
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
