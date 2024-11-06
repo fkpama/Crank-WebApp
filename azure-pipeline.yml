@@ -5,6 +5,7 @@ pool:
 steps:
 - task: crankRunnerTask@0.1.3
   inputs:
+    persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
     scenario: 'webapp'
     platform: 'build-agent'
