@@ -7,7 +7,7 @@ variables:
 steps:
 - task: crankInstallerTask@0.0.6
 
-- task: frederic-kpama.crank.tasks.crankRunner@0.1.7
+- task: crankRunnerTask@0
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
