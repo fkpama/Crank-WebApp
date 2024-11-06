@@ -1,6 +1,8 @@
 pool:
   name: Engie
 
+variables:
+    system.debug: true
 
 steps:
 - task: crankInstallerTask@0.0.6
