@@ -7,7 +7,7 @@ variables:
 steps:
 - task: crankInstallerTask@0.0.6
 
-- task: crankRunnerTask@0.1.9
+- task: crankRunnerTask@0.1.10
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
