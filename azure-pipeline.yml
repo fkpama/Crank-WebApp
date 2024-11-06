@@ -3,7 +3,7 @@ pool:
 
 
 steps:
-- task: crankInstallerTask@0.0.2
+- task: crankInstallerTask@0.0.3
 
 - task: crankRunnerTask@0
   inputs:
