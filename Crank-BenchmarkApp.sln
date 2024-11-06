@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crank-BenchmarkApp", "Crank-BenchmarkApp\Crank-BenchmarkApp.csproj", "{B944F5A6-FDCF-4415-A733-36C4DA190073}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crank-BenchmarkApp", "Crank-BenchmarkApp\Crank-BenchmarkApp.csproj", "{B944F5A6-FDCF-4415-A733-36C4DA190073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7FEC7D1-853A-41B1-8567-99BB7B989217}"
+	ProjectSection(SolutionItems) = preProject
+		api.benchmarks.yml = api.benchmarks.yml
+		azure-pipeline.yml = azure-pipeline.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

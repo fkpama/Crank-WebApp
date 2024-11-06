@@ -5,8 +5,8 @@ jobs:
   webapp:
     sources:
       app:
-        repository: https://kpamafrederic@dev.azure.com/kpamafrederic/Framework/_git/MCS-Crank
-    project: webapp/Crank-BenchmarkApp/Crank-BenchmarkApp.csproj
+        repository: https://github.com/fkpama/Crank-WebApp.git
+    project: app/Crank-BenchmarkApp/Crank-BenchmarkApp.csproj
     readyStateText: Application started.
     environmentVariables:
       ASPNETCORE_ENVIRONMENT: Development
