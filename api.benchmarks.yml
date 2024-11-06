@@ -29,7 +29,7 @@ profiles:
 
       client_app:
         endpoints:
-          - http://crank-agent-2:5011
+          - http://crank-agent-2:5010
 
   local:
     jobs:
