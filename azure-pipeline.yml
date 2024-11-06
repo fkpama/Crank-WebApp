@@ -5,7 +5,7 @@ variables:
     system.debug: true
 
 steps:
-- task: crankRunnerTask@0.1.15
+- task: crankRunnerTask@0.1.16
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
