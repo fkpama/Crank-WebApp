@@ -11,6 +11,18 @@ jobs:
     environmentVariables:
       ASPNETCORE_ENVIRONMENT: Development
 
+  benchmark_dotnet:
+    sources:
+      app:
+        repository: https://github.com/fkpama/Crank-WebApp.git
+    project: app/Crank-BenchmarkDotnet/Crank-BenchmarkDotnet.csproj
+    variables:
+      filterArg: "*"
+      jobArg: short
+    arguments: --job {{jobArg}} --filter {{filterArg}} --memory
+    options:
+      benchmarkDotNet: true
+
 scenarios:
   webapp:
     server:
@@ -18,6 +30,10 @@ scenarios:
 
     client_app:
       job: bombardier
+
+  benchmarks:
+    server:
+      job: benchmark_dotnet
 
 
 profiles:

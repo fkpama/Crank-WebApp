@@ -5,10 +5,18 @@ variables:
     system.debug: true
 
 steps:
-- task: crankRunnerTask@0.1.31
+- task: crankRunnerTask@0.1.32
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
     scenario: 'webapp'
+    platform: 'build-agent'
+    connectionString: 'Hello World'
+
+- task: crankRunnerTask@0.1.32
+  inputs:
+    persistBenchmarks: true
+    configFile: 'api.benchmarks.yml'
+    scenario: 'benchmarks'
     platform: 'build-agent'
     connectionString: 'Hello World'
