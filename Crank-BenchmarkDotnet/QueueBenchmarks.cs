@@ -2,6 +2,9 @@
 
 namespace Crank_BenchmarkDotnet;
 
+[MemoryDiagnoser]
+[ThreadingDiagnoser]
+[ExceptionDiagnoser]
 public class QueueBenchmarks
 {
 	[Params(10, 100, 1000, 10000)]
