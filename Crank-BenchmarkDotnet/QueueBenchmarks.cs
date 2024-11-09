@@ -11,7 +11,7 @@ public class QueueBenchmarks
 
 	public int ArraySize { get; set; }
 
-	[Benchmark(Baseline = true)]
+	[Benchmark(Baseline = true, Description = "Some Description for First_Benchmark")]
 	public void First_Benchmark()
 	{
 		for (var i = 0; i < ArraySize; i++)
@@ -20,7 +20,7 @@ public class QueueBenchmarks
 		}
 	}
 
-	[Benchmark]
+	[Benchmark(Description = "Some Description for Second_Benchmark")]
 	public void Second_Benchmark()
 	{
 		for (var i = 0; i < ArraySize; i++)
