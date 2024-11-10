@@ -6,6 +6,7 @@ variables:
 
 steps:
 - task: crankRunnerTask@0.1.27
+  displayName: Bombardier
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'
@@ -14,6 +15,7 @@ steps:
     connectionString: 'Hello World'
 
 - task: crankRunnerTask@0.1.27
+  displayName: BenchmarkDotNet
   inputs:
     persistBenchmarks: true
     configFile: 'api.benchmarks.yml'

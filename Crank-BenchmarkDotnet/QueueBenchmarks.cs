@@ -33,8 +33,10 @@ public class QueueBenchmarks
 		}
 	}
 
+	[Benchmark]
 	public void Third_Benchmark()
 	{
+		Thread.Sleep(1);
 		throw new Exception();
 	}
 }
