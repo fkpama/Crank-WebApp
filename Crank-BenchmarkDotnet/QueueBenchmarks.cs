@@ -5,6 +5,8 @@ namespace Crank_BenchmarkDotnet;
 [MemoryDiagnoser]
 [ThreadingDiagnoser]
 [ExceptionDiagnoser]
+[KeepBenchmarkFiles]
+[JsonExporterAttribute.Full]
 public class QueueBenchmarks
 {
 	[Params(10, 100, 1000, 10000)]
