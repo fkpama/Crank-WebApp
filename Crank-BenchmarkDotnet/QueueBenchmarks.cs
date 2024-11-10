@@ -8,8 +8,10 @@ namespace Crank_BenchmarkDotnet;
 public class QueueBenchmarks
 {
 	[Params(10, 100, 1000, 10000)]
-
 	public int ArraySize { get; set; }
+
+	[Params("Hello", "World")]
+	public string? Text { get; set; }
 
 	[Benchmark(Baseline = true, Description = "Some Description for First_Benchmark")]
 	public void First_Benchmark()
@@ -27,5 +29,10 @@ public class QueueBenchmarks
 		{
 			Guid.Parse(Guid.NewGuid().ToString());
 		}
+	}
+
+	public void Third_Benchmark()
+	{
+		throw new Exception();
 	}
 }
